@@ -68,6 +68,7 @@
 		03F2FED0179C5B0A00D2DDF8 /* Keywords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03F2FECE179C5B0A00D2DDF8 /* Keywords.plist */; };
 		03FA8B771AEE3D2500D55C16 /* RTBProtocolsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FA8B761AEE3D2500D55C16 /* RTBProtocolsTVC.m */; };
 		4CE3702117E375DD00CD4BF2 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3702017E375DD00CD4BF2 /* UIAlertView+Blocks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		94B4B7801D9B9B350061C1DB /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B4B77F1D9B9B350061C1DB /* CallKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,7 @@
 		03FA8B761AEE3D2500D55C16 /* RTBProtocolsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTBProtocolsTVC.m; sourceTree = "<group>"; };
 		4CE3701F17E375DD00CD4BF2 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		4CE3702017E375DD00CD4BF2 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		94B4B77F1D9B9B350061C1DB /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94B4B7801D9B9B350061C1DB /* CallKit.framework in Frameworks */,
 				033574C01B035ACD004A3CB6 /* libz.dylib in Frameworks */,
 				033574BE1B035ABF004A3CB6 /* CFNetwork.framework in Frameworks */,
 				03959DD4176AFC4D002A1FCC /* CoreGraphics.framework in Frameworks */,
@@ -339,6 +342,7 @@
 		03959DD0176AFC4D002A1FCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94B4B77F1D9B9B350061C1DB /* CallKit.framework */,
 				033574BF1B035ACD004A3CB6 /* libz.dylib */,
 				033574BD1B035ABF004A3CB6 /* CFNetwork.framework */,
 				03959DD1176AFC4D002A1FCC /* Foundation.framework */,
@@ -469,7 +473,7 @@
 				ORGANIZATIONNAME = "Nicolas Seriot";
 				TargetAttributes = {
 					03959DCD176AFC4D002A1FCC = {
-						DevelopmentTeam = HK64RUWW3P;
+						DevelopmentTeam = 5G7UTXBTG8;
 					};
 					03959DF1176AFC4E002A1FCC = {
 						TestTargetID = 03959DCD176AFC4D002A1FCC;
@@ -698,6 +702,7 @@
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5G7UTXBTG8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCRuntime/OCRuntime-Prefix.pch";
 				INFOPLIST_FILE = "OCRuntime/OCRuntime-Info.plist";
@@ -719,6 +724,7 @@
 				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5G7UTXBTG8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCRuntime/OCRuntime-Prefix.pch";
 				INFOPLIST_FILE = "OCRuntime/OCRuntime-Info.plist";
