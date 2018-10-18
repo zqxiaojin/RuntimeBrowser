@@ -133,6 +133,14 @@ static const NSUInteger kPrivateFrameworks = 1;
         NSUInteger count = 0;
         NSUInteger total = [allFrameworks count];
         
+        NSArray<NSString*>* skipArray = @[ @"/System/Library/PrivateFrameworks/PowerlogCore.framework",
+                                           @"/System/Library/PrivateFrameworks/PowerlogAccounting.framework",
+                                           @"/System/Library/PrivateFrameworks/PowerlogFullOperators.framework",
+                                           @"/System/Library/PrivateFrameworks/PowerlogHelperdOperators.framework",
+                                           @"/System/Library/PrivateFrameworks/PowerlogLiteOperators.framework",
+                                           
+                                           ];
+        
         for(NSBundle *b in allFrameworks) {
             
 #if TARGET_IPHONE_SIMULATOR
@@ -141,6 +149,10 @@ static const NSUInteger kPrivateFrameworks = 1;
                 continue;
             }
 #endif
+      
+            if ([skipArray containsObject:[b bundlePath]]) {
+                continue;
+            }
             
             count++;
             float percent = (float)count / (float)total;
@@ -154,7 +166,7 @@ static const NSUInteger kPrivateFrameworks = 1;
             }];
             
             @try {
-                //NSLog(@"-- %@", b);
+                NSLog(@"-- will load %@", [b bundlePath]);
                 NSError *loadError = nil;
                 BOOL success = [b loadAndReturnError:&loadError];
                 if(success == NO) {
